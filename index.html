@@ -2,55 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hermela Yeshanew | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP CDN for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
   <header>
-    <h1>Hermela Yeshanew</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1 class="animated-title">Hermela Yeshanew</h1>
+    <p class="animated-subtitle">Software Engineer | Full Stack Developer</p>
   </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a 5th-year Software Engineering student passionate about building web applications using modern technologies.</p>
+    <p>
+      I'm a passionate software engineering student specializing in full-stack development.
+      I enjoy building interactive web applications, games, and systems that solve real-world problems.
+      Skilled with JavaScript, React, Node.js, MySQL, and more.
+    </p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-
-    <div class="project">
-        <h3>🎮 Platformer Game</h3>
-        <p>A 2D JavaScript platformer game with physics and level design, built using vanilla JS and canvas.</p>
-        <a href="https://github.com/Ellaa18/platformer-game" target="_blank">View Code on GitHub</a>
-      </div>
-    
-      <div class="project">
-        <h3>💼 IT Asset Tracker</h3>
-        <p>A web-based system to track IT assets, with backend logic and data management.</p>
-        <a href="https://github.com/Ellaa18/it-asset-tracker" target="_blank">View Code on GitHub</a>
-      </div>
     <div class="project">
       <h3>Help Desk System</h3>
-      <p>A full-stack help desk app with user registration, ticket tracking, and admin dashboard.</p>
-      <a href="https://github.com/Ellaa18/helpdesk_system" target="_blank">View Code on Github</a>
+      <p>Full-featured ticket management system with user, admin, and technician roles.</p>
+      <a href="https://github.com/Ellaa18/helpdesk_system" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
     </div>
-    <!-- Add more projects here -->
+    <div class="project">
+      <h3>IT Asset Tracker</h3>
+      <p>Tracks IT assets with user-friendly dashboards and secure backend.</p>
+      <a href="https://github.com/Ellaa18/it-asset-tracker" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+    </div>
+    <div class="project">
+      <h3>Platformer Game</h3>
+      <p>2D JavaScript game with gravity, movement, and obstacle logic.</p>
+      <a href="https://github.com/Ellaa18/platformer-game" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: hermelayeshanewella@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/Ellaa18" target="_blank">github.com/Ellaa18</a></p>
+    <p>Email: <a href="mailto:hermelayeshanewella@gmail.com">hermelayeshanewella@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Ellaa18" target="_blank" rel="noopener noreferrer">github.com/Ellaa18</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Hermela Yeshanew</p>
+    <p>&copy; 2025 Hermela Yeshanew. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
