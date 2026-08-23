@@ -70,7 +70,7 @@ function App() {
     <header className="site-header">
       <a className="brand" href="#top"><span>HERMELA.Y</span><strong>Hermela<br />Yeshanew</strong></a>
       <button className="menu-button" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "Close" : "Menu"}</button>
-      <nav className={menuOpen ? "open" : ""}><button onClick={() => scrollTo("#about")}>About</button><button onClick={() => scrollTo("#projects")}>Projects</button><button onClick={() => scrollTo("#skills")}>Skills</button><button onClick={() => scrollTo("#contact")}>Contact</button></nav>
+      <nav className={menuOpen ? "open" : ""}><button onClick={() => scrollTo("#about")}>About</button><button onClick={() => scrollTo("#projects")}>Projects</button><button onClick={() => scrollTo("#skills")}>Skills</button></nav>
       <button className="header-link" onClick={openChat}>Let's talk <span>↗</span></button>
     </header>
     <main id="top">
