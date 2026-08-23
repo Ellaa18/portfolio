@@ -14,7 +14,7 @@ function App() {
   const [chatOpen, setChatOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [formError, setFormError] = useState("");
-  const [botReply, setBotReply] = useState("Hi! I’m Hermela’s portfolio assistant. What would you like to talk about?");
+  const [botReply, setBotReply] = useState("Hi! I’m Hermela. What would you like to talk about?");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const filters = ["All work", "Full stack", "Product", "Creative code"];
   const visibleProjects = filter === "All work" ? projects : projects.filter((project) => project.type === filter);
@@ -34,7 +34,7 @@ function App() {
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`);
     window.location.href = `mailto:hermelayeshanewella@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
-    setBotReply("Your email draft is ready. Just press send in your mail app and Hermela will receive it.");
+    setBotReply("Your email draft is ready. Just press send in your mail app and i will receive it.");
   };
 
   return <>
