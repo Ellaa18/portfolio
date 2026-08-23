@@ -32,7 +32,25 @@ function App() {
     messageLink?.setAttribute("tabindex", "0");
     messageLink?.addEventListener("click", openMessage);
     messageLink?.addEventListener("keydown", openMessageWithKeyboard);
-    return () => { reveal.disconnect(); messageLink?.removeEventListener("click", openMessage); messageLink?.removeEventListener("keydown", openMessageWithKeyboard); };
+    const launcher = document.querySelector(".chat-launcher");
+    const footer = document.querySelector("footer");
+    const updateLauncherPosition = () => {
+      if (!launcher || !footer) return;
+      const footerTop = footer.getBoundingClientRect().top;
+      const launcherHeight = launcher.offsetHeight;
+      const gap = 24;
+      if (footerTop < window.innerHeight - gap) {
+        launcher.classList.add("is-docked");
+        launcher.style.top = `${footer.offsetTop - launcherHeight - gap}px`;
+      } else {
+        launcher.classList.remove("is-docked");
+        launcher.style.top = "";
+      }
+    };
+    window.addEventListener("scroll", updateLauncherPosition, { passive: true });
+    window.addEventListener("resize", updateLauncherPosition);
+    updateLauncherPosition();
+    return () => { reveal.disconnect(); window.removeEventListener("scroll", updateLauncherPosition); window.removeEventListener("resize", updateLauncherPosition); messageLink?.removeEventListener("click", openMessage); messageLink?.removeEventListener("keydown", openMessageWithKeyboard); };
   }, [filter]);
 
   const scrollTo = (id) => { document.querySelector(id)?.scrollIntoView({ behavior: "smooth" }); setMenuOpen(false); };
